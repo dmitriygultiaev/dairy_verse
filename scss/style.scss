@@ -2,11 +2,56 @@ $sky-blue-color: #29C1E7;
 $blue-color: #094FAE;
 $text-grey: #747474;
 
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/latoregular.woff2') format('woff2'); 
+    src: url('/fonts/latoregular.woff') format('woff'); 
+    src: url('/fonts/latoregular.ttf') format('truetype');
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/latomedium.woff2') format('woff2'); 
+    src: url('/fonts/latomedium.woff') format('woff'); 
+    src: url('/fonts/latomedium.ttf') format('truetype');
+
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/latosemibold.woff2') format('woff2'); 
+    src: url('/fonts/latosemibold.woff') format('woff'); 
+    src: url('/fonts/latosemibold.ttf') format('truetype');
+
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/latobold.woff2') format('woff2'); 
+    src: url('/fonts/latobold.woff') format('woff'); 
+    src: url('/fonts/latobold.ttf') format('truetype');
+
+    font-weight: 700;
+    font-style: normal;
+}
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 100px;
 }
 
 .wrap {
@@ -45,16 +90,20 @@ header {
     &_href {
 
         a {
-            font-family: 'Lato', sans-serif;
             font-weight: 400;
             font-size: 16px;
             line-height: 140.5%;
             text-decoration: none;
             color: $text-grey;
             margin-right: 55px;
+            transition: .4s;
 
             &:last-child {
                 margin-right: 0px;
+            }
+
+            &:hover {
+                color: $blue-color;
             }
         }
     }
@@ -62,7 +111,6 @@ header {
     &_sing_in {
         
         a {
-            font-family: 'Lato', sans-serif;
             font-weight: 400;
             font-size: 16px;
             line-height: 140.5%;
@@ -71,13 +119,20 @@ header {
             border: 1px solid #26C8F0;
             border-radius: 20px;
             padding: 9px 42px;
+            transition: .4s;
+            background: transparent;
+
+            &:hover {
+                background: $sky-blue-color;
+                color: #fff;
+
+            }
         }
     }
 
     &_language {
 
         a {
-            font-family: 'Lato', sans-serif;
             font-weight: 400;
             font-size: 16px;
             line-height: 140.5%;
@@ -86,4 +141,152 @@ header {
             text-decoration: underline;
         }
     }
+}
+
+.header {
+
+    &_content {
+        margin-top: 150px;
+        position: relative;
+    }
+
+    &_h1 {
+        width: 54%;
+        
+        h1 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 38px;
+            line-height: 1.4;
+            color: $blue-color;
+        }
+    }
+
+    &_p {
+        width: 40%;
+        margin-top: 30px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 1.6;
+        color: $text-grey;
+    }
+
+    &_button {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    &_reg {
+
+        a {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 162%;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 28px 33px;
+            background: $sky-blue-color;
+            border-radius: 30px;
+        }
+    }
+
+    &_get {
+        position: relative;
+
+        a {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 162%;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: $blue-color;
+            text-decoration: none;
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-57%);
+            left: calc(100% + 10px);
+            font-weight: 500;
+            font-size: 21px;
+            color: $blue-color;
+        }
+    }
+
+    &_img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-43%);
+        left: 47%;
+    }
+}
+
+.z-2 {
+
+    &_block {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 430px;
+        background: #fff;
+        padding-top: 72px;
+        box-shadow: 0px 15px 88px rgba(62, 68, 128, 0.12);
+        border-radius: 15px;
+        top: -180px;
+    }
+
+    &_header {
+        margin-left: 84px;
+        width: 53%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 125%;
+        color: $blue-color;
+    }
+
+    &_img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &_content1, &_content2, &_content3 {
+        position: absolute;
+        display: inline-block;
+        padding: 21px 30px;
+        background: #FFFFFF;
+        box-shadow: 0px 15px 88px rgba(62, 68, 128, 0.12);
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 145%;
+        color: $text-grey;
+    }
+
+    &_content1 {
+        top: 50%;
+        left: 9%;
+    }
+
+    &_content2 {
+        top: 55%;
+        left: 45%;
+    }
+
+    &_content3 {
+        top: 26%;
+        left: 72%;
+    }
+
 }
